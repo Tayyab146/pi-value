@@ -1,15 +1,6 @@
 #!/bin/bash
-N=${1:-10}
+echo "MODIFY THE ALGORITHM TO PRODUCE A MORE PRECISE CALCULATION OF PI" | tee report.txt
+echo "3.14159" | tee -a report.txt
 
-a=0
-b=1
-
-echo "The Fibonacci series is : "
-
-for (( i=0; i<N; i++ ))
-do
-    echo -e "$i\t$a"
-    fn=$((a + b))
-    a=$b
-    b=$fn
-done
+# UNCOMMENT THE FOLLOWING LINE TO GET A MORE PRECISE CALCULATION OF PI. ALSO REMOVE THE PREVIOUS ECHO STATEMENTS.
+# echo "scale=1000; 4*a(1)" | bc -l | tee report.txt
